@@ -2,7 +2,7 @@
 # CSC 212
 
 # solution 1
-def useRecursion(strInput: str, wordMap: dict):
+def useRecursion(strInput: str, wordMap: dict,):
     if len(strInput) == 0:
         return
     spaces = 0
