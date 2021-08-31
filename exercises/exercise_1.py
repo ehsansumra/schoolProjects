@@ -1,25 +1,33 @@
+# Ehsan Sumra
+# CSC 212
 
-def testParse(strInput: str, map: dict):
+# solution 1
+def useRecursion(strInput: str, wordMap: dict):
     if len(strInput) == 0:
         return
-    
     spaces = 0
     for letter in strInput:
-        if letter == " ":
+        if letter == " ": # if a space is reached
             spaces += 1
             
             strIndex = strInput.index(letter)
-            word = strInput[:strIndex]
-            updateWordCount(word, wordMap)
+            word = strInput[:strIndex] # Slicing the string before the space
+            updateWordCount(word, wordMap) # update this word to the dictionary
             
             skip = strIndex + 1
-            newStr = strInput[skip:]
-            testParse(newStr, wordMap)
+            newStr = strInput[skip:] # create a new string
+            useRecursion(newStr, wordMap) # recursion
             
-            break
-    
+            return 
     if spaces == 0:
-        updateWordCount(strInput, wordMap)  
+        updateWordCount(strInput, wordMap)
+
+# solution 2: using split
+def easyParse(strInput: str, wordMap: dict):
+    stringList = strInput.split() # string to array with words as elements
+    for word in stringList:
+        updateWordCount(word, wordMap)
+    return 
 
 def updateWordCount(word: str, wordMap: dict):
     if word in wordMap:
@@ -32,9 +40,18 @@ def printMap(wordMap: dict):
         if key != "":
             print(key, wordMap[key])
 
-
-if __name__ == "__main__":
+def MethodOne():
     wordMap = {}
     strInput = input("Enter a string: ")
-    testParse(strInput, wordMap)
+    useRecursion(strInput, wordMap)
     printMap(wordMap)
+
+def MethodTwo():
+    wordMap = {}
+    strInput = input("Enter a string: ")
+    easyParse(strInput, wordMap)
+    printMap(wordMap)
+
+if __name__ == "__main__":
+    MethodTwo()
+    
