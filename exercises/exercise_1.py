@@ -53,5 +53,5 @@ def MethodTwo():
     printMap(wordMap)
 
 if __name__ == "__main__":
-    MethodTwo()
+    MethodOne()
     

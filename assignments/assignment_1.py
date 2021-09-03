@@ -1,4 +1,5 @@
 # Ehsan Sumra
+# Assignment 1
 # Exercise 1
 
 def storeWord(word: str):
@@ -54,6 +55,8 @@ def exerciseOne():
 
 # Exercise 2
 def parseStrList(strList: str) -> list:
+    # parsing the string input into a list
+    # uneccessary, but it was fun.
     parseBrackets = strList.replace("[", "")
     parseBrackets = parseBrackets.replace("]", "")
     parseSpaces = parseBrackets.replace(" ", "")
@@ -115,7 +118,7 @@ def sum67(numList: list):
         sum += num
     return sum
 
-def exerciseTwo():
+def exerciseTwo(): # sum67
     strList = input("Enter a list of numbers: ")
     numList = parseStrList(strList)
     print(sum67(numList))
