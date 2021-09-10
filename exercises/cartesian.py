@@ -11,6 +11,9 @@ def computeCartesianDistance(x1, y1, x2, y2):
     
     return squareRoot(square(x2 - x1) + square(y2 - y1))
 
-if __name__ == "__main__":
+def main():
     dist = computeCartesianDistance(-7, -4, 17, 6.5)
     print(dist)
+
+if __name__ == "__main__":
+    main()
