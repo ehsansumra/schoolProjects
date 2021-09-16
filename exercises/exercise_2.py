@@ -1,8 +1,8 @@
 
 class Student:
-    def __init__(self, name):
+    def __init__(self, name: str, attend: int = 0):
         self.name: str = name
-        self.attend: int = 0
+        self.attend: int = attend
         self.grades: list = []
     
     def getName(self) -> str:
@@ -28,6 +28,9 @@ def main():
     print(student.getAttendance())
 
     student.addGrade("A")
+    student.addGrade("A+")
+    student.addGrade("A-")
     print(student.getGrades())
 
-main()
+if __name__ == "__main__":
+    main()
