@@ -42,7 +42,7 @@ def inputEvent():
 
 # sorting a list of SocialEvents by the number of attendees
 def sortByAttendees(eventList: list):
-    eventList.sort(key = attendeeGetter)
+    eventList.sort(key = attendeeGetter, reverse = True)
     return eventList
 
 # printing each SocialEvent in the list using .__str__()
@@ -88,4 +88,4 @@ def main():
     printEventList(sortedEventList, "\n--- Sorted By Attendees ---")
     testGettersSetters(sortedEventList[0])
 
-main()
+testSorting()
