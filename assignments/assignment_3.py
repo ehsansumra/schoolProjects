@@ -1,4 +1,5 @@
-
+# Ehsan Sumra
+# Assignment 3
 class VeganHamburger:
 
     def __init__(self, weight: int, doneness: str, cheese: bool, toppings: list):
@@ -69,6 +70,7 @@ def parseCheese(option) -> bool:
 def bite50(burger: VeganHamburger):
     for i in range(50):
         burger.bite()
+        
 # A quick tester that doesn't require user input
 # Call instead of main to see the output
 def tester():
