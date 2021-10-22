@@ -104,7 +104,7 @@ def runSpeedTest(n: int, start: int, stop: int, unique: bool):
 def main():
     # setting unique = True will guarantee a unique list input (worst case).
     # setting unique = False will generate a random list with possible duplicates.
-    unique = True
+    unique = False
 
     # input size
     n = 1000000 
